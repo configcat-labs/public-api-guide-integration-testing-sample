@@ -4,7 +4,7 @@
   "description": "A step by step guide on how to use feature flags in integration tests",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
