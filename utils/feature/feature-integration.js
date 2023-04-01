@@ -1,6 +1,6 @@
 const axiosInstance = require('../axios/axios-instance');
 
-// Step 1 - Create Product
+// Step 1 - Create Test Product
 const createTestProduct = async () => {
   const organizationId = "08da0156-fc5b-4132-88e5-1d42032078f5";
   return await axiosInstance
@@ -62,6 +62,8 @@ const createTestFeatureFlag = async (configId, environmentId) => {
     });
 };
 
+// Bundle the individual functions together
+
 async function setupFeatureIntegration() {
   try {
     const { productId } = await createTestProduct();
@@ -74,5 +76,7 @@ async function setupFeatureIntegration() {
     throw new Error(error);
   }
 }
+
+// Export the function so we can use it in the feature-integration.test.js
 
 module.exports = setupFeatureIntegration;
