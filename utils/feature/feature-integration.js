@@ -1,11 +1,11 @@
-const axiosInstance = require("../axios/axios-instance");
+const axiosInstance = require('../axios/axios-instance');
 
 // Step 1 - Create Product
-const createTestingProduct = async () => {
+const createTestProduct = async () => {
   const organizationId = "08da0156-fc5b-4132-88e5-1d42032078f5";
   return await axiosInstance
     .post(`organizations/${organizationId}/products`, {
-      name: "Testing Product",
+      name: "Test Product",
       description: "A product for testing",
     })
     .then((response) => response.data)
@@ -64,10 +64,11 @@ const createTestFeatureFlag = async (configId, environmentId) => {
 
 async function setupFeatureIntegration() {
   try {
-    const { productId } = await createTestingProduct();
+    const { productId } = await createTestProduct();
     const { configId } = await createTestConfig(productId);
     const { environmentId } = await createTestEnvironment(productId);
     const createTestFeatureFlagResponse = await createTestFeatureFlag(configId, environmentId);
+    createTestFeatureFlagResponse.productId = productId;
     return createTestFeatureFlagResponse;
   } catch (error) {
     throw new Error(error);
