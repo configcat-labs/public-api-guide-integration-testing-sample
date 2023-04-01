@@ -1,12 +1,7 @@
 const axiosInstance = require('./utils/axios/axios-instance');
 const setupFeatureIntegration = require('./utils/feature/feature-integration');
 
-/*
-This integration test tests that all the individual functions works (integrates) with each other.
-
-*/
-
-// Step 3 - Remove Test Resources
+// Remove Test Resources
 const removeTestResources = async (productId) => {
   return await axiosInstance
     .delete(`products/${productId}`)
