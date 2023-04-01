@@ -1,5 +1,6 @@
-const featureIntegration = require('./feature-integration');
+const setupFeatureIntegration = require('./utils/feature/feature-integration');
 
-test('should return pass', () => { 
-  expect(featureIntegration()).toBe('pass');
+test('should return an object containing a property key', async () => { 
+  const data = await setupFeatureIntegration();
+  expect(data).toHaveProperty("key");
  })
