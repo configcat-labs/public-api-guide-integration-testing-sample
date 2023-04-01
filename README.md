@@ -35,7 +35,7 @@ const axiosInstance = axios.create({
 npm run test
 ```
 
-If errors are uncovered exceptions will be thrown and displayed in the console.
+If errors are uncovered, they will be thrown and displayed in the console.
 
 ## Learn more
 
