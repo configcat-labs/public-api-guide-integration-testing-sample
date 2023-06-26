@@ -1,5 +1,7 @@
 # How to use ConfigCat's public API to conduct integration tests
 
+#### [Read the blog post here](https://configcat.com/blog/2023/06/26/public-api-guide/)
+
 This is a companion code repository for the blog article as titled above. The article guides the reader step by step on how to use ConfigCat's Public API to conduct an integration test.
 
 If you wish to code along with me, you can check out the `starter-code` branch. Getting stuck? feel free to view the complete code on the `main` branch.
