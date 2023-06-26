@@ -2,6 +2,8 @@
 
 This is a companion code repository for the blog article as titled above. The article guides the reader step by step on how to use ConfigCat's Public API to conduct an integration test.
 
+If you wish to code along with me, you can check out the `starter-code` branch. Getting stuck? feel free to view the complete code on the `main` branch.
+
 ## Build & Run
 
 1. Clone this repository.
